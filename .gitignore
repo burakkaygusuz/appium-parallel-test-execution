@@ -1,0 +1,19 @@
+### Intellij ###
+.idea
+modules.xml
+.idea/misc.xml
+*.iml
+*.ipr
+
+### Maven ###
+target
+bin
+
+### VSCode ###
+.vscode
+.settings
+.classpath
+.factorypath
+.project
+
+.DS_Store

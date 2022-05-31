@@ -1,0 +1,17 @@
+[server]
+port = 5555
+
+[node]
+detect-drivers = false
+
+[relay]
+url = "http://127.0.0.1:4723"
+status-endpoint = "/status"
+
+[[relay.configs]]
+max-sessions = 1
+stereotype = '{"platformName":"android","appium:udid":"emulator-5554","appium:platformVersion":"12"}'
+
+[[relay.configs]]
+max-sessions = 1
+stereotype = '{"platformName":"android","appium:udid":"emulator-5556","appium:platformVersion":"12"}'
