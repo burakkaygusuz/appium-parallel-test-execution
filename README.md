@@ -26,12 +26,12 @@ appium driver install uiautomator2
 ```
 
 - Download the
-  latest [Selenium Grid Server](https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.2.0/selenium-server-4.2.1.jar)
+  latest [Selenium Grid Server](https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.2.0/selenium-server-4.2.2.jar)
   .
 
 ## Executing Tests
 
-- Create and start the two virtual devices according to below guide.
+- Create and start the two virtual devices according to a below guide.
 
 > https://developer.android.com/studio/run/managing-avds
 
