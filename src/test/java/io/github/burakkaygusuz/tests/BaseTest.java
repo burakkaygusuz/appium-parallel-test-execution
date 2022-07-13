@@ -1,9 +1,9 @@
 package io.github.burakkaygusuz.tests;
 
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import lombok.SneakyThrows;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
@@ -14,8 +14,8 @@ import java.net.URL;
 
 public class BaseTest {
 
-    private final ThreadLocal<AppiumDriver> driverThreadLocal = new ThreadLocal<>();
-    public AppiumDriver driver;
+    private final ThreadLocal<WebDriver> driverThreadLocal = new ThreadLocal<>();
+    public WebDriver driver;
 
     @BeforeMethod
     @Parameters({"udid", "platformVersion"})
