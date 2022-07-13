@@ -30,7 +30,7 @@ public class BaseTest {
                 .skipUnlock()
                 .setAutoGrantPermissions(true);
 
-        driverThreadLocal.set(new AndroidDriver(new URL("http://localhost:4723"), options));
+        driverThreadLocal.set(new RemoteWebDriver(new URL("http://localhost:4444"), options));
         driver = driverThreadLocal.get();
     }
 
