@@ -25,15 +25,9 @@ npm install appium@next -g
 appium driver install uiautomator2
 ```
 
-- Download the
-  latest [Selenium Grid Server](https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.2.0/selenium-server-4.2.2.jar)
-  .
-
 ## Executing Tests
 
-- Create and start the two virtual devices according to a below guide.
-
-> https://developer.android.com/studio/run/managing-avds
+- Create and start the two virtual devices according to the guide:  <https://developer.android.com/studio/run/managing-avds>
 
 - Start appium server.
 
@@ -47,10 +41,10 @@ appium server -ka 800
 git clone git@github.com:burakkaygusuz/appium-parallel-test-execution.git
 ```
 
-- Start grid server as standalone.
+- Execute the yml file.
 
 ```shell
-java -jar selenium-server-4.x.x.jar standalone --config .\path-to-repo\config.toml
+docker-compose -f docker-compose.yml up
 ```
 
 - Run the test.
@@ -58,6 +52,3 @@ java -jar selenium-server-4.x.x.jar standalone --config .\path-to-repo\config.to
 ```shell
 mvn clean test
 ```
-
-
-
