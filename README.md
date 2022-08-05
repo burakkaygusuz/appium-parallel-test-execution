@@ -27,13 +27,8 @@ appium driver install uiautomator2
 
 ## Executing Tests
 
-- Create and start the two virtual devices according to the guide:  <https://developer.android.com/studio/run/managing-avds>
-
-- Start appium server.
-
-```shell
-appium server -ka 800
-```
+- Create and start the two virtual devices according to the
+  guide:  <https://developer.android.com/studio/run/managing-avds>
 
 - Clone the repository.
 
@@ -41,7 +36,15 @@ appium server -ka 800
 git clone git@github.com:burakkaygusuz/appium-parallel-test-execution.git
 ```
 
-- Execute the yml file.
+- Start the appium servers.
+
+```shell
+appium server --config .\src\test\resources\servers\appium_1.yml
+
+appium server --config .\src\test\resources\servers\appium_2.yml
+```
+
+- Execute the yml file to install the Grid.
 
 ```shell
 docker-compose -f docker-compose.yml up
