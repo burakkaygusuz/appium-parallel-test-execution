@@ -30,13 +30,41 @@ appium driver install uiautomator2
 - Create and start the two virtual devices according to the
   guide:  <https://developer.android.com/studio/run/managing-avds>
 
+### Capability Sets
+
+- Emulator 1
+
+```json
+
+{
+  "platformName": "android",
+  "appium:platformVersion": "12",
+  "appium:automationName": "UIAutomator2",
+  "appium:udid": "emulator-5554",
+  "appium:systemPort": "8101"
+}
+```
+
+- Emulator 2
+
+```json
+
+{
+  "platformName": "android",
+  "appium:platformVersion": "13",
+  "appium:automationName": "UIAutomator2",
+  "appium:udid": "emulator-5556",
+  "appium:systemPort": "8102"
+}
+```
+
 - Clone the repository.
 
 ```shell
 git clone git@github.com:burakkaygusuz/appium-parallel-test-execution.git
 ```
 
-- Start the appium servers.
+- Start the appium servers using the related config files, respectively.
 
 ```shell
 appium server --config .\src\test\resources\servers\appium_1.yml
