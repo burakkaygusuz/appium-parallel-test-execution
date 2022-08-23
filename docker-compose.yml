@@ -1,7 +1,7 @@
 # To execute this docker-compose yml file use `docker-compose -f docker-compose.yml up`
 # Add the `-d` flag at the end for detached execution
-# To stop the execution, hit Ctrl+C, and then `docker-compose -f docker-compose.down`
-version: "3.7"
+# To stop the execution, hit Ctrl+C, and then `docker-compose -f docker-compose.yml down`
+version: "3.8"
 services:
   node-1:
     container_name: node-1
@@ -14,6 +14,8 @@ services:
       - SE_EVENT_BUS_HOST=selenium-hub
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+      - SE_NODE_OVERRIDE_MAX_SESSIONS=true
+      - SE_NODE_MAX_SESSIONS=1
     extra_hosts:
       - "host.docker.internal:host-gateway"
 
@@ -28,6 +30,8 @@ services:
       - SE_EVENT_BUS_HOST=selenium-hub
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+      - SE_NODE_OVERRIDE_MAX_SESSIONS=true
+      - SE_NODE_MAX_SESSIONS=1
     extra_hosts:
       - "host.docker.internal:host-gateway"
 

@@ -2,7 +2,7 @@
 
 <suite name="Appium Parallel Test Execution Suite" parallel="tests" thread-count="2">
 
-    <test name="Pixel XL API 31">
+    <test name="Pixel 5 API 32">
         <parameter name="udid" value="emulator-5554"/>
         <parameter name="platformVersion" value="12"/>
         <classes>
@@ -10,9 +10,9 @@
         </classes>
     </test>
 
-    <test name="Pixel 5 API 32">
+    <test name="Pixel 5 API 33">
         <parameter name="udid" value="emulator-5556"/>
-        <parameter name="platformVersion" value="12"/>
+        <parameter name="platformVersion" value="13"/>
         <classes>
             <class name="io.github.burakkaygusuz.tests.LoginTest"/>
         </classes>

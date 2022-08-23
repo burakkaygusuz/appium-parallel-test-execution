@@ -10,4 +10,4 @@ status-endpoint = "/status"
 
 [[relay.configs]]
 max-sessions = 1
-stereotype = '{"platformName":"android","appium:udid":"emulator-5554","appium:platformVersion":"12","appium:systemPort":"8101"}'
+stereotype = '{"platformName":"android","appium:automationName":"UIAutomator2","appium:udid":"emulator-5554","appium:platformVersion":"12","appium:systemPort":"8101"}'
