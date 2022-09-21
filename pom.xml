@@ -21,7 +21,7 @@
         <!-- Dependencies -->
         <assertj-core.version>3.23.1</assertj-core.version>
         <appium.version>8.2.0</appium.version>
-        <junit-jupiter.version>5.9.0</junit-jupiter.version>
+        <junit-jupiter.version>5.9.1</junit-jupiter.version>
         <lombok.version>1.18.24</lombok.version>
         <selenium.version>4.4.0</selenium.version>
         <testng.version>7.6.1</testng.version>
