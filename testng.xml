@@ -1,4 +1,4 @@
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
 <suite name="Appium Parallel Test Execution Suite" parallel="tests" thread-count="2">
 
@@ -10,7 +10,7 @@
         </classes>
     </test>
 
-    <test name="Pixel 5 API 33">
+    <test name="Pixel 6 API 33">
         <parameter name="udid" value="emulator-5556"/>
         <parameter name="platformVersion" value="13"/>
         <classes>
