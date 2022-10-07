@@ -31,7 +31,7 @@ public class BaseTest {
                 .disableWindowAnimation()
                 .clearDeviceLogsOnStart();
 
-        driverThreadLocal.set(new RemoteWebDriver(new URL("http://localhost:4444"), options));
+        driverThreadLocal.set(new RemoteWebDriver(options, false));
         driver = driverThreadLocal.get();
     }
 
