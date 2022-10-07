@@ -19,7 +19,7 @@ public class BaseScreen {
     }
 
     protected void click(By locator) {
-        WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         wait.until(ExpectedConditions.elementToBeClickable(element)).click();
     }
 
@@ -28,6 +28,6 @@ public class BaseScreen {
     }
 
     protected void sendKeys(By locator, CharSequence keysToSend) {
-        wait.until(ExpectedConditions.presenceOfElementLocated(locator)).sendKeys(keysToSend);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).sendKeys(keysToSend);
     }
 }
