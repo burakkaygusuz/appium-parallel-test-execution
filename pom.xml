@@ -26,7 +26,7 @@
         <selenium.version>4.8.1</selenium.version>
         <testng.version>7.7.1</testng.version>
         <!-- Plugins -->
-        <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
+        <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
         <maven-surefire-plugin.version>3.0.0-M9</maven-surefire-plugin.version>
         <slf4j.version>2.0.6</slf4j.version>
     </properties>
