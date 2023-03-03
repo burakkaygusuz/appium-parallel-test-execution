@@ -1,7 +1,6 @@
 package io.github.burakkaygusuz.tests;
 
 import io.appium.java_client.android.options.UiAutomator2Options;
-import lombok.SneakyThrows;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterMethod;
@@ -18,8 +17,7 @@ public class BaseTest {
 
     @BeforeMethod
     @Parameters(value = {"udid", "platformVersion"})
-    @SneakyThrows(MalformedURLException.class)
-    public void setUp(String udid, String platformVersion) {
+    public void setUp(String udid, String platformVersion) throws MalformedURLException {
 
         URL url = new URL("https://github.com/saucelabs/my-demo-app-rn/releases/download/v1.3.0/Android-MyDemoAppRN.1.3.0.build-244.apk");
         final UiAutomator2Options options = new UiAutomator2Options().setUdid(udid)
