@@ -3,10 +3,11 @@ package io.github.burakkaygusuz.screens;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+
+import static org.openqa.selenium.support.ui.ExpectedConditions.*;
 
 public class BaseScreen {
 
@@ -19,15 +20,15 @@ public class BaseScreen {
     }
 
     protected void click(By locator) {
-        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-        wait.until(ExpectedConditions.elementToBeClickable(element)).click();
+        WebElement element = wait.until(visibilityOfElementLocated(locator));
+        wait.until(elementToBeClickable(element)).click();
     }
 
     protected String getText(By locator) {
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).getText();
+        return wait.until(visibilityOfElementLocated(locator)).getText();
     }
 
     protected void sendKeys(By locator, CharSequence keysToSend) {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).sendKeys(keysToSend);
+        wait.until(visibilityOfElementLocated(locator)).sendKeys(keysToSend);
     }
 }

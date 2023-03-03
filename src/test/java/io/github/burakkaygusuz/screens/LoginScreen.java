@@ -1,15 +1,16 @@
 package io.github.burakkaygusuz.screens;
 
-import io.appium.java_client.AppiumBy;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import static io.appium.java_client.AppiumBy.*;
+
 public class LoginScreen extends BaseScreen {
 
-    private final By headerTextLocator = AppiumBy.xpath("//android.view.ViewGroup[@content-desc=\"container header\"]/android.widget.TextView");
-    private final By usernameInputFieldLocator = AppiumBy.accessibilityId("Username input field");
-    private final By passwordInputFieldLocator = AppiumBy.accessibilityId("Password input field");
-    private final By loginButtonLocator = AppiumBy.accessibilityId("Login button");
+    private final By headerTextLocator = xpath("//android.view.ViewGroup[@content-desc=\"container header\"]/android.widget.TextView");
+    private final By usernameInputFieldLocator = accessibilityId("Username input field");
+    private final By passwordInputFieldLocator = accessibilityId("Password input field");
+    private final By loginButtonLocator = accessibilityId("Login button");
 
     public LoginScreen(WebDriver driver) {
         super(driver);

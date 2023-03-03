@@ -1,13 +1,14 @@
 package io.github.burakkaygusuz.screens;
 
-import io.appium.java_client.AppiumBy;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import static io.appium.java_client.AppiumBy.*;
+
 public class MainScreen extends BaseScreen {
 
-    private final By openMenuButtonLocator = AppiumBy.accessibilityId("open menu");
-    private final By loginMenuItemLocator = AppiumBy.accessibilityId("menu item log in");
+    private final By openMenuButtonLocator = accessibilityId("open menu");
+    private final By loginMenuItemLocator = accessibilityId("menu item log in");
 
     public MainScreen(WebDriver driver) {
         super(driver);
