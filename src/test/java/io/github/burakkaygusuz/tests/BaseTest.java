@@ -12,7 +12,7 @@ import java.net.URL;
 
 public class BaseTest {
 
-    private final ThreadLocal<WebDriver> driverThreadLocal = new ThreadLocal<>();
+    private static final ThreadLocal<WebDriver> DRIVER_THREAD_LOCAL = new ThreadLocal<>();
     public WebDriver driver;
 
     @BeforeMethod
@@ -29,8 +29,8 @@ public class BaseTest {
                 .disableWindowAnimation()
                 .clearDeviceLogsOnStart();
 
-        driverThreadLocal.set(new RemoteWebDriver(options, false));
-        driver = driverThreadLocal.get();
+        DRIVER_THREAD_LOCAL.set(new RemoteWebDriver(options, false));
+        driver = DRIVER_THREAD_LOCAL.get();
     }
 
     @AfterMethod(alwaysRun = true)
