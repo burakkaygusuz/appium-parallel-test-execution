@@ -8,10 +8,10 @@ Demo project that demonstrates how to test mobile devices in parallel using Appi
 
 Make sure you have installed all the following prerequisites on your development machine:
 
-| OS      | JDK                                | Maven                 | Node.js                    | Android Studio                                |
-|---------|------------------------------------|-----------------------|----------------------------|-----------------------------------------------|
-| Windows | `scoop install java/temurin17-jdk` | `scoop install maven` | `scoop install nodejs-lts` | `winget install --id=Google.AndroidStudio -e` |
-| macOS   | `brew install --cask temurin`      | `brew install maven`  | `brew install node@16`     | `brew install --cask android-studio`          |
+| OS      | JDK                                  | Maven                 | Node.js                    | Android Studio                                |
+|---------|--------------------------------------|-----------------------|----------------------------|-----------------------------------------------|
+| Windows | `scoop install java/temurin-lts-jdk` | `scoop install maven` | `scoop install nodejs-lts` | `winget install -e --id Google.AndroidStudio` |
+| macOS   | `brew install --cask temurin`        | `brew install maven`  | `brew install node@16`     | `brew install --cask android-studio`          |
 
 - Install the appium server via npm:
 
