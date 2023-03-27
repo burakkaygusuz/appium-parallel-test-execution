@@ -23,7 +23,7 @@
         <appium.version>8.3.0</appium.version>
         <junit-jupiter.version>5.9.2</junit-jupiter.version>
         <lombok.version>1.18.24</lombok.version>
-        <selenium.version>4.8.1</selenium.version>
+        <selenium.version>4.8.3</selenium.version>
         <testng.version>7.7.1</testng.version>
         <!-- Plugins -->
         <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
