@@ -23,7 +23,7 @@
         <appium.version>8.4.0</appium.version>
         <junit-jupiter.version>5.9.2</junit-jupiter.version>
         <lombok.version>1.18.24</lombok.version>
-        <testng.version>7.7.1</testng.version>
+        <testng.version>7.8.0</testng.version>
         <!-- Plugins -->
         <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
         <maven-surefire-plugin.version>3.0.0</maven-surefire-plugin.version>
