@@ -20,7 +20,7 @@
         <maven.compiler.target>17</maven.compiler.target>
         <!-- Dependencies -->
         <assertj-core.version>3.24.2</assertj-core.version>
-        <appium.version>8.5.0</appium.version>
+        <appium.version>8.5.1</appium.version>
         <junit-jupiter.version>5.9.2</junit-jupiter.version>
         <lombok.version>1.18.24</lombok.version>
         <testng.version>7.7.1</testng.version>
