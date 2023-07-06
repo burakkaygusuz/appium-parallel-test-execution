@@ -11,18 +11,12 @@ Make sure you have installed all the following prerequisites on your development
 | OS      | JDK                                  | Maven                 | Node.js                    | Android Studio                                |
 |---------|--------------------------------------|-----------------------|----------------------------|-----------------------------------------------|
 | Windows | `scoop install java/temurin-lts-jdk` | `scoop install maven` | `scoop install nodejs-lts` | `winget install -e --id Google.AndroidStudio` |
-| macOS   | `brew install --cask temurin`        | `brew install maven`  | `brew install node@16`     | `brew install --cask android-studio`          |
+| macOS   | `brew install --cask temurin`        | `brew install maven`  | `brew install node@18`     | `brew install --cask android-studio`          |
 
-- Install the appium server via npm:
-
-```shell
-npm install appium@next -g
-```
-
-- Install the UIAutomator2 driver.
+- Install the appium server with driver via npm:
 
 ```shell
-appium driver install uiautomator2
+npm install --global appium --drivers=uiautomator2
 ```
 
 ## Executing Tests
