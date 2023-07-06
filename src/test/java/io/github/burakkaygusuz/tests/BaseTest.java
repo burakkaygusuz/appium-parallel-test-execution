@@ -19,8 +19,9 @@ public class BaseTest {
     @Parameters(value = {"udid", "platformVersion"})
     public void setUp(String udid, String platformVersion) throws MalformedURLException {
 
-        URL url = new URL("https://github.com/saucelabs/my-demo-app-rn/releases/download/v1.3.0/Android-MyDemoAppRN.1.3.0.build-244.apk");
-        final UiAutomator2Options options = new UiAutomator2Options().setUdid(udid)
+        URL url = new URL("https://github.com/saucelabs/my-demo-app-android/releases/download/1.0.17/mda-1.0.17-20.apk");
+        final UiAutomator2Options options = new UiAutomator2Options()
+                .setUdid(udid)
                 .setPlatformVersion(platformVersion)
                 .setApp(url)
                 .noReset()
