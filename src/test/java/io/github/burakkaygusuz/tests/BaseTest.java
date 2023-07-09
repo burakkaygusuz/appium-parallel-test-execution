@@ -1,6 +1,7 @@
 package io.github.burakkaygusuz.tests;
 
 import io.appium.java_client.android.options.UiAutomator2Options;
+import io.github.burakkaygusuz.utils.PropertyUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterMethod;
@@ -9,9 +10,11 @@ import org.testng.annotations.Parameters;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Properties;
 
 public class BaseTest {
 
+    protected final Properties props = PropertyUtils.getInstance().loadProperties("app.properties");
     private static final ThreadLocal<WebDriver> DRIVER_THREAD_LOCAL = new ThreadLocal<>();
     public WebDriver driver;
 
@@ -19,7 +22,7 @@ public class BaseTest {
     @Parameters(value = {"udid", "platformVersion"})
     public void setUp(String udid, String platformVersion) throws MalformedURLException {
 
-        URL url = new URL("https://github.com/saucelabs/my-demo-app-android/releases/download/1.0.17/mda-1.0.17-20.apk");
+        URL url = new URL(props.getProperty("APP_URL"));
         final UiAutomator2Options options = new UiAutomator2Options()
                 .setUdid(udid)
                 .setPlatformVersion(platformVersion)
