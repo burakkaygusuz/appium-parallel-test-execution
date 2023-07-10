@@ -2,25 +2,30 @@ package io.github.burakkaygusuz.screens;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import static io.appium.java_client.AppiumBy.*;
+import static io.appium.java_client.AppiumBy.accessibilityId;
+import static io.appium.java_client.AppiumBy.linkText;
+import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
 
 public class MainScreen extends BaseScreen {
 
-    private final By openMenuButtonLocator = accessibilityId("open menu");
-    private final By loginMenuItemLocator = accessibilityId("menu item log in");
+    private final By viewMenuLocator;
+    private final By loginMenuItemLocator;
 
     public MainScreen(WebDriver driver) {
         super(driver);
+
+        viewMenuLocator = accessibilityId("View menu");
+        loginMenuItemLocator = linkText("Log In");
     }
 
-    public MainScreen openMenu() {
-        click(loginMenuItemLocator);
+    public MainScreen viewMenu() {
+        wait.until(elementToBeClickable(viewMenuLocator)).click();
         return this;
     }
 
     public void goToLoginPage() {
-        click(openMenuButtonLocator);
+        wait.until(ExpectedConditions.elementToBeClickable(loginMenuItemLocator)).click();
     }
-
 }

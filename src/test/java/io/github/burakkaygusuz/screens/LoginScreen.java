@@ -1,28 +1,36 @@
 package io.github.burakkaygusuz.screens;
 
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import static io.appium.java_client.AppiumBy.*;
+import static io.appium.java_client.AppiumBy.id;
+import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
+import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
 public class LoginScreen extends BaseScreen {
 
-    private final By headerTextLocator = xpath("//android.view.ViewGroup[@content-desc=\"container header\"]/android.widget.TextView");
-    private final By usernameInputFieldLocator = accessibilityId("Username input field");
-    private final By passwordInputFieldLocator = accessibilityId("Password input field");
-    private final By loginButtonLocator = accessibilityId("Login button");
+    private final By headerTextLocator;
+    private final By usernameInputFieldLocator;
+    private final By passwordInputFieldLocator;
+    private final By loginButtonLocator;
 
     public LoginScreen(WebDriver driver) {
         super(driver);
+
+        headerTextLocator = id("com.saucelabs.mydemoapp.android:id/loginTV");
+        usernameInputFieldLocator = id("com.saucelabs.mydemoapp.android:id/nameET");
+        passwordInputFieldLocator = id("com.saucelabs.mydemoapp.android:id/passwordET");
+        loginButtonLocator = id("com.saucelabs.mydemoapp.android:id/loginBtn");
     }
 
     public String getHeaderText() {
-        return getText(headerTextLocator);
+        return wait.until(visibilityOfElementLocated(headerTextLocator)).getText();
     }
 
     public void doLogin(String username, String password) {
-        sendKeys(usernameInputFieldLocator, username);
-        sendKeys(passwordInputFieldLocator, password);
-        click(loginButtonLocator);
+        wait.until(visibilityOfElementLocated(usernameInputFieldLocator)).sendKeys(username);
+        wait.until(visibilityOfElementLocated(passwordInputFieldLocator)).sendKeys(password);
+        wait.until(elementToBeClickable(loginButtonLocator)).click();
     }
 }
