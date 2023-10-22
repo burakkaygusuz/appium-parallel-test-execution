@@ -22,7 +22,7 @@ public class PropertyUtils {
         try (InputStream inputStream = getClass().getClassLoader().getResourceAsStream(fileName)) {
             properties.load(inputStream);
         } catch (IOException e) {
-            e.printStackTrace();
+            e.fillInStackTrace();
         }
         return properties;
     }
