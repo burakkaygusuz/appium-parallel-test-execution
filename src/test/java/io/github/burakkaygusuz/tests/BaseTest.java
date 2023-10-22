@@ -9,6 +9,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 
 import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.Properties;
 
@@ -20,9 +22,9 @@ public class BaseTest {
 
     @BeforeMethod
     @Parameters(value = {"udid", "platformVersion"})
-    public void setUp(String udid, String platformVersion) throws MalformedURLException {
+    public void setUp(String udid, String platformVersion) throws URISyntaxException, MalformedURLException {
 
-        URL url = new URL(props.getProperty("APP_URL"));
+        URL url = new URI(props.getProperty("APP_URL")).toURL();
         final UiAutomator2Options options = new UiAutomator2Options()
                 .setUdid(udid)
                 .setPlatformVersion(platformVersion)
