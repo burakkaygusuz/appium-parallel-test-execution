@@ -21,7 +21,7 @@
         <!-- Dependencies -->
         <assertj-core.version>3.24.2</assertj-core.version>
         <appium.version>9.0.0</appium.version>
-        <junit-jupiter.version>5.10.0</junit-jupiter.version>
+        <junit-jupiter.version>5.10.1</junit-jupiter.version>
         <testng.version>7.8.0</testng.version>
         <!-- Plugins -->
         <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
