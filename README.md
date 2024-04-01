@@ -32,7 +32,7 @@ npm install --global appium --drivers=uiautomator2
 
 {
   "platformName": "android",
-  "appium:platformVersion": "12",
+  "appium:platformVersion": "14",
   "appium:automationName": "UIAutomator2",
   "appium:udid": "emulator-5554",
   "appium:systemPort": "8101"
