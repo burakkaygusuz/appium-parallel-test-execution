@@ -9,9 +9,9 @@ Demo project that demonstrates how to test mobile devices in parallel using Appi
 Make sure you have installed all the following prerequisites on your development machine:
 
 | OS      | JDK                            | Maven                 | Node.js                                 | Android Studio                                |
-|---------|--------------------------------|-----------------------|-----------------------------------------|-----------------------------------------------|
+| ------- | ------------------------------ | --------------------- | --------------------------------------- | --------------------------------------------- |
 | Windows | `scoop install java/openjdk21` | `scoop install maven` | `winget install --id OpenJS.NodeJS.LTS` | `winget install -e --id Google.AndroidStudio` |
-| macOS   | `brew install --cask temurin`  | `brew install maven`  | `brew install node@18`                  | `brew install --cask android-studio`          |
+| macOS   | `brew install openjdk`         | `brew install maven`  | `brew install node@20`                  | `brew install --cask android-studio`          |
 
 - Install the appium server with a driver via npm:
 
@@ -22,14 +22,13 @@ npm install --global appium --drivers=uiautomator2
 ## Executing Tests
 
 - Create and start the two virtual devices according to the
-  guide:  <https://developer.android.com/studio/run/managing-avds>
+  guide: <https://developer.android.com/studio/run/managing-avds>
 
 ### Capability Sets
 
 - Emulator 1
 
 ```json
-
 {
   "platformName": "android",
   "appium:platformVersion": "14",
@@ -42,7 +41,6 @@ npm install --global appium --drivers=uiautomator2
 - Emulator 2
 
 ```json
-
 {
   "platformName": "android",
   "appium:platformVersion": "13",
