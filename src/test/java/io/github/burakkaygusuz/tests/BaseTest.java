@@ -1,7 +1,8 @@
 package io.github.burakkaygusuz.tests;
 
 import io.appium.java_client.android.options.UiAutomator2Options;
-import io.github.burakkaygusuz.utils.PropertyUtils;
+import io.github.burakkaygusuz.utils.PropertyUtil;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterMethod;
@@ -12,11 +13,10 @@ import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
-import java.util.Properties;
 
 public class BaseTest {
 
-    protected final Properties props = PropertyUtils.getInstance().loadProperties("app.properties");
+    protected PropertyUtil props = PropertyUtil.getInstance("config.properties");
     private static final ThreadLocal<WebDriver> DRIVER_THREAD_LOCAL = new ThreadLocal<>();
     public WebDriver driver;
 
