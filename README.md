@@ -2,7 +2,7 @@
 
 ![Appium](https://img.shields.io/maven-central/v/io.appium/java-client?color=%23428bca&label=appium&logo=appium&style=for-the-badge) ![TestNG](https://img.shields.io/maven-central/v/org.testng/testng?color=%23ffcc66&label=testng&logo=testng&style=for-the-badge)
 
-Demo project that demonstrates how to test mobile devices in parallel using Appium 2.0 and TestNG.
+Demo project that demonstrates how to test mobile devices in parallel using Appium and TestNG.
 
 ## Prerequisites
 
@@ -31,7 +31,7 @@ npm install --global appium --drivers=uiautomator2
 ```json
 {
   "platformName": "android",
-  "appium:platformVersion": "14",
+  "appium:platformVersion": "15",
   "appium:automationName": "UIAutomator2",
   "appium:udid": "emulator-5554",
   "appium:systemPort": "8101"
@@ -43,7 +43,7 @@ npm install --global appium --drivers=uiautomator2
 ```json
 {
   "platformName": "android",
-  "appium:platformVersion": "13",
+  "appium:platformVersion": "14",
   "appium:automationName": "UIAutomator2",
   "appium:udid": "emulator-5556",
   "appium:systemPort": "8102"
